@@ -68,7 +68,7 @@ pip install scikit-learn
 3. Run the corresponding scripts following the documentation within each folder.
 
 ## Script Descriptions
-Due to the large volume of data, GitHub does not allow uploading all the result files. You can access all result files via this [link](your-link-here).
+Due to the large volume of data, GitHub does not allow uploading all the result files. You can access all result files via this [link](https://drive.google.com/drive/folders/1xlziR2qLWgLGcgJ8t3Nzqug0Nb_PVPzX?usp=sharing).
 
 In the `EEG_DATASET` folder, there is a subfolder named `dataset_information`, which contains metadata information for each dataset. It is curated to standardize the metadata from both datasets into the same format.
 
