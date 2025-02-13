@@ -1,8 +1,10 @@
 import os
+# If you want to change the default paths, you have to edit these lines. 
 
-# You must change this path to the path where you have the EEG databases
-DATABASES_PATH = os.path.join("/","media", "bzorzet", "EEG_DATABASES")
-DIRECTORY_TO_SAVE_ROOT = os.path.join("/","media", "bzorzet", "BCI-Deep-Learning-BZ")
+DATABASES_PATH = os.path.join(os.getcwd(), "EEG_DATABASES")
+
+# You must change this path to the path where you want to save the results
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 
 
 ########################### AVAILABLES DATASETS #############################################   

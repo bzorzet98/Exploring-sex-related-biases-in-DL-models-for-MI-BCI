@@ -1,0 +1,64 @@
+{   "script_config":{
+                    "experiment_name":"DL_BCI_fairness",
+                    "model_to_train":"EEGNetv4_SM",
+                    "database_name":"Lee2019_MI",
+                    "database_session":1,
+                    "timestamp_to_continue_trainning": null},
+    "databases": {
+        "config": "classical_preprocessing_0",
+        "channels": ["C3", "Cz", "C4"],
+        "subjects":null
+    },
+    "torch_dataset":{
+        "class_name": "SimpleDataset",
+        "module_name": "src.skorch_modules",
+        "params": null
+    },
+    "model": {
+        "class_name": "EEGNetv4_SM",
+        "module_name": "src.networks",
+        "params": {
+            "in_chans": 3,
+            "n_classes": 2,
+            "input_window_samples": 256,
+            "drop_prob": 0.25,
+            "final_conv_length": "auto",
+            "pool_mode": "mean",
+            "F1": 8,
+            "D": 2,
+            "F2": 16,
+            "kernel_length": 64,
+            "third_kernel_size": [8, 4]
+        }
+    },
+    "optimizer": {
+        "class_name": "Adam",
+        "module_name": "torch.optim",
+        "params": {
+            "lr": 0.001,
+            "betas": [0.9, 0.999],
+            "eps": 1e-08,
+            "weight_decay":0.001
+        }
+    },
+    "criterion": {
+        "class_name": "CrossEntropyLoss",
+        "module_name": "torch.nn",
+        "params": {}
+    },
+    "training":{
+        "max_epochs": 500,
+        "batch_size": 50,
+        "early_stopping_patience": 500,
+        "max_norm_grad": null,
+        "seed": 8,
+        "device": "cuda",
+        "iterator_train__shuffle":true,
+        "n_subjects_val": 4,
+        "model_init_seed":[399, 506, 586, 196, 918],
+        "sets_seeds": [232, 379, 985, 384, 129, 
+                        197, 721, 44, 87, 140, 
+                        253, 830, 518, 214, 410, 
+                        657, 31, 470, 499, 464]
+        }
+}

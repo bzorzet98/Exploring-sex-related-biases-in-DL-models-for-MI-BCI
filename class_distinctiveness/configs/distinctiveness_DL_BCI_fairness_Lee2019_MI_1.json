@@ -1,0 +1,10 @@
+{   "script_config":{
+                    "experiment_name":"DL_BCI_fairness",
+                    "database_name":"Lee2019_MI",
+                    "database_session":1},
+    "databases": {
+        "config": "classical_preprocessing_0",
+        "channels": ["C3", "Cz", "C4"],
+        "subjects":null
+    }
+}

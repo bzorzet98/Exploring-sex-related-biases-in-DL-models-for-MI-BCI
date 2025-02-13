@@ -1,0 +1,51 @@
+{   "preprocessing_name": "classical_preprocessing_0",
+    "database": { "class_name": "Lee2019_MI",
+                "module_name": "moabb.datasets",
+                "args": null},
+    "preprocessing_pipeline":[
+        {"class_name": "filter_raw", "module_name":"src.preprocessing", 
+        "kwargs": {
+                    "l_freq": 0.5, "h_freq": 40.0, "picks": "eeg", "filter_length": "auto",
+                    "l_trans_bandwidth": "auto", "h_trans_bandwidth": "auto", "n_jobs": null,
+                    "method": "fir", "iir_params": null, "phase": "zero", "fir_window": "hamming",
+                    "fir_design": "firwin", "skip_by_annotation": ["edge", "bad_acq_skip"],
+                    "pad": "reflect_limited", "verbose": false}
+        },
+        {"class_name": "filter_notch_raw", "module_name":"src.preprocessing", 
+         "kwargs": {
+                    "freqs": [50.0], "picks": "eeg", "filter_length": "auto",
+                    "notch_widths": null, "trans_bandwidth": 1.0, "n_jobs": null,
+                    "method": "fir", "iir_params": null, "mt_bandwidth": null, "p_value": 0.05,
+                    "phase": "zero", "fir_window": "hamming", "fir_design": "firwin",
+                    "pad": "reflect_limited", "skip_by_annotation": ["edge", "bad_acq_skip"],
+                    "verbose": false}
+        },
+        {"class_name": "re_referencing_raw", "module_name":"src.preprocessing", 
+            "kwargs": {
+                    "ref_channels": ["Fz"], "projection": false, "ch_type": "eeg",
+                    "forward": null, "joint": false, "verbose": false}
+        },
+        {"class_name": "convert_to_epochs", "module_name":"src.preprocessing", 
+        "kwargs": {
+                                                    "events": null, "event_id": null, "tmin": 0, "tmax": 3.0,
+                                                    "baseline": null, "picks": null, "preload": true, "reject": null,
+                                                    "flat": null, "proj": true, "decim": 1, "reject_tmin": null,
+                                                    "reject_tmax": null, "detrend": null, "on_missing": "raise",
+                                                    "reject_by_annotation": true, "metadata": null, "event_repeated": "error",
+                                                    "verbose": false}
+        },
+        {"class_name": "resample_epoch", "module_name":"src.preprocessing", 
+         "kwargs": {
+                                                "sfreq": 128, "npad": "auto", "window": "boxcar",
+                                                "n_jobs": null, "pad": "edge", "verbose": false}
+        },
+        {"class_name": "crop_epoch", "module_name":"src.preprocessing", 
+        "kwargs": {
+                                                "tmin": 0.5, "tmax": 2.5, "include_tmax": false, "verbose": false}
+        },
+        {"class_name": "convert_to_np_array", "module_name":"src.preprocessing", 
+         "kwargs": {}},
+        {"class_name": "apply_unit_factor", "module_name":"src.preprocessing", 
+         "kwargs": {"unit_factor": null}}],
+    "description": "Classical preprocessing pipeline for MI-EEG data"
+}

@@ -1,9 +1,9 @@
 import argparse
 import init_paths
 from src.utils.imports import import_class
-from moabb.datasets import Shin2017A, Shin2017B
+
 parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_to_download', type=str, default = 'Shin2017A')
+parser.add_argument('--dataset_to_download', type=str, default = 'Cho2017')
 parser.add_argument('--from_moabb', type=bool, default = True)
 args = parser.parse_args()
 
@@ -17,4 +17,3 @@ if args.from_moabb:
     subject_list = dataset.subject_list
     print(f"Subject list: {subject_list}")
     dataset.get_data(subject_list) 
-

@@ -1,0 +1,49 @@
+{   "script_config":{
+                    "experiment_name":"DL_BCI_fairness",
+                    "model_to_train":"CSP+LDA",
+                    "database_name":"Cho2017",
+                    "database_session":1,
+                    "timestamp_to_continue_trainning": null},
+    "databases": {
+        "config": "config_0",
+        "channels": ["C3", "Cz", "C4"],
+        "subjects":null
+    },
+    "feature_extractor": {
+        "class_name": "CSP",
+        "module_name": "mne.decoding",
+        "params": {
+            "n_components":6, 
+            "reg":"empirical", 
+            "log":true, 
+            "cov_est":"epoch", 
+            "transform_into":"average_power", 
+            "norm_trace":false, 
+            "cov_method_params":null, 
+            "rank":null, 
+            "component_order":"mutual_info"
+        }
+    },
+    "classifier":{
+        "class_name": "LinearDiscriminantAnalysis",
+        "module_name": "sklearn.discriminant_analysis",
+        "params": {
+            "solver":"svd", 
+            "shrinkage":null, 
+            "priors":null, 
+            "n_components":null, 
+            "store_covariance":false, 
+            "tol":0.0001, 
+            "covariance_estimator":null
+        }
+    },
+    "training":{
+        "seed": 8,
+        "n_subjects_val": 4,
+        "model_init_seed":[399],
+        "sets_seeds": [232, 379, 985, 384, 129, 
+                        197, 721, 44, 87, 140, 
+                        253, 830, 518, 214, 410, 
+                        657, 31, 470, 499, 464]
+        }
+}
