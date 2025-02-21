@@ -16,4 +16,4 @@ if args.from_moabb:
         dataset = dataset_class()
     subject_list = dataset.subject_list
     print(f"Subject list: {subject_list}")
-    dataset.get_data(subject_list) 
+    dataset.download()
