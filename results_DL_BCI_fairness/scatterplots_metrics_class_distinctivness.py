@@ -16,9 +16,11 @@ experiment_name = 'DL_BCI_fairness'
 datasets_name = ['Cho2017', 'Lee2019_MI', 'Lee2019_MI']
 sessions = [1,1,2]
 model_1 = 'EEGNetv4_SM'
-timestamps_1 = ['20241004_144153', '20241105_185644', '20241113_125922' ]
+timestamps_1 = ['20241004_144153', '20241105_185644', '20241113_125922' ] # Original timestamps
+# timestamps_1 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
 model_2 = 'CSP+LDA'
-timestamps_2 = ['20241210_161906', '20241210_172944', '20241210_181717']
+timestamps_2 = ['20250218_162518', '20250218_172951', '20250218_181318'] # Original timestamps
+# timestamps_2 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
 row_titles = ['Cho 2017', 'Lee 2019 session 1', 'Lee 2019 session 2']
 # Name of script
 script_name = os.path.basename(__file__).split('.')[0]
@@ -37,25 +39,40 @@ subset = 'test'
 
 plt.rcParams.update({
     "font.family": "Times New Roman",  # Set font to Times New Roman
-    "axes.titlesize": 10,             # Title size
+    "axes.titlesize": 9,             # Title size
     "axes.labelsize": 9,              # Labels size
     "xtick.labelsize": 9,             # X-axis tick size
-    "ytick.labelsize": 9,             # Y-axis tick size
+    "ytick.labelsize": 10,             # Y-axis tick size
     "legend.fontsize": 9              # Legend size
 })
 
 marker_size = 6
 line_width = 1.5
 title_pad =  5
-figsize = (7,7)
+figsize = (10,7)
+
 
 for metric_name in metrics_names:
     row_axes = 0
+    if metric_name == "auc":
+        figsize = (7,5)
+        plt.rcParams.update({
+            "font.family": "Times New Roman",  # Set font to Times New Roman
+            "axes.titlesize": 9,             # Title size
+            "axes.labelsize": 9,              # Labels size
+            "xtick.labelsize": 9,             # X-axis tick size
+            "ytick.labelsize": 10,             # Y-axis tick size
+            "legend.fontsize": 9              # Legend size
+        })
 
     # Create the figure first figure
     fig, axes = plt.subplots(3, 3, figsize=figsize)  
     fig_log, axes_log = plt.subplots(3, 3, figsize=figsize)  
     plt.subplots_adjust(left=0.1, right=0.5, top=0.5, bottom=0.1)
+
+    column_titles = [f'Deep Learning Model', 'CSP + LDA', 'Difference']
+    row_titles = ['Cho 2017', 'Lee 2019 session 1', 'Lee 2019 session 2']
+
     for dataset_name,row_title, session, timestamp_1, timestamp_2 in zip(datasets_name, row_titles, sessions, timestamps_1, timestamps_2):
         
         # Path to load and save the results
@@ -125,8 +142,8 @@ for metric_name in metrics_names:
                                                 logx=True)
 
             axes[row_axes, column_it].set_title(f'')  
-            axes[row_axes, column_it].set_xlabel('class distinctiveness')  
-            axes[row_axes, column_it].set_ylabel(ylabels[column_it])  
+            # axes[row_axes, column_it].set_xlabel('class distinctiveness')  
+            # axes[row_axes, column_it].set_ylabel(ylabels[column_it])  
             axes[row_axes, column_it].tick_params(axis='both', which='major')  
             axes[row_axes, column_it].grid(True)
 
@@ -164,9 +181,7 @@ for metric_name in metrics_names:
                                                 ax = axes_log[row_axes, column_it],
                                                 )
 
-            axes_log[row_axes, column_it].set_title(f'')  
-            axes_log[row_axes, column_it].set_xlabel('log class distinctiveness')  
-            axes_log[row_axes, column_it].set_ylabel(ylabels[column_it])  
+
             axes_log[row_axes, column_it].tick_params(axis='both', which='major')  
             axes_log[row_axes, column_it].grid(True)
 
@@ -174,8 +189,22 @@ for metric_name in metrics_names:
                 axes_log[row_axes, column_it].set_ylim([0., 1.05])
 
             column_it += 1
-        axes[row_axes, 1].set_title(row_titles[row_axes], pad=title_pad, loc='center')
-        axes_log[row_axes, 1].set_title(row_titles[row_axes], pad=title_pad, loc='center')
+
+        for ax in axes_log[:, :].flatten():
+            ax.set_xlabel('')
+            ax.set_ylabel('')   
+            
+        for ax, col in zip(axes_log[0], column_titles):
+            ax.set_title(col, fontsize=10)
+
+        for ax, row in zip(axes_log[:, 0], row_titles):
+            ax.set_ylabel(row, fontsize=10, fontweight='bold', rotation=90, labelpad=20)
+        
+        for ax in axes_log[-1, :]:
+            ax.set_xlabel('class distinctiveness')
+
+        # axes[row_axes, 1].set_title(row_titles[row_axes], pad=title_pad, loc='center')
+        # axes_log[row_axes, 1].set_title(row_titles[row_axes], pad=title_pad, loc='center')
 
         row_axes += 1
 

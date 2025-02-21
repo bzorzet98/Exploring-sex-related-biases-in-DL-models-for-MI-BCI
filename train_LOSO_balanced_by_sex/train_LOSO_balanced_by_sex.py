@@ -49,7 +49,7 @@ def custom_accuracy_scoring(net, X, y_true):
 
 # Create an ArgumentParser object
 parser = argparse.ArgumentParser()
-parser.add_argument('--script_config', type=str, default = 'EEGNetv4_config_fairness_Lee2019_MI_1')
+parser.add_argument('--script_config', type=str, default = 'EEGNetv4_Cho2017_paper_config')
 parser.add_argument('--cuda', type=int, default = 0)
 parser.add_argument('--save_scripts', type=bool, default = False)
 args = parser.parse_args()
