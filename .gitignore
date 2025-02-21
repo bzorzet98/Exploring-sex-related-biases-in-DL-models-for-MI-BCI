@@ -174,5 +174,4 @@ cython_debug/
 RESULTS/*
 
 # Folders in EEG_DATASET that not are databases_information
-EEG_DATABASES/*
-!EEG_DATABASES/database_information/
+EEG_DATASET/*/!databases_information

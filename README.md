@@ -140,8 +140,8 @@ To run it, execute:
 
 ```bash
 conda activate eeg_environment
-python download_datasets.py --dataset_to_download "Cho2017"
-python download_datasets.py --dataset_to_download "Lee2019_MI"
+python download_datasets --dataset_to_download "Cho2017"
+python download_datasets --dataset_to_download "Lee2019_MI"
 ```
 
 ### 5. `metadata_simple_analysis.py`
