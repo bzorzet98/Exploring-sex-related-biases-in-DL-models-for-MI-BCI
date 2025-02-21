@@ -38,9 +38,9 @@ Index
   16. `results_DL_BCI_fairness/partial_correlation_tables_metrics_class_distinctiveness.py`
   17. `results_DL_BCI_fairness/mixing_model_effects_table.py`
   18. Other scripts that could be interesting to run
-5. Possible bugs
-6. Citation 
-7. License
+- Possible bugs
+- Citation 
+- License
 
 ## Environment Setup
 To ensure reproducibility, the following Conda environments need to be created with their respective libraries.
