@@ -18,7 +18,6 @@ Index
   3.  Analysis Environment
 - General Comments
 - Database Configuration
-  * Changing the Database Path
 - Scripts Description
   1. `global_config.py`
   2. `init_paths.py`
