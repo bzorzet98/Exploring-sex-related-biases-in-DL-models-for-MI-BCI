@@ -4,11 +4,11 @@ This repository contains the code and resources necessary to reproduce the exper
 
 ## Dowload this repository
 Clone this repository:
-    ```bash
-    git clone https://github.com/bzorzet98/Exploring-sex-related-biases-in-DL-models-for-MI-BCI.git
+```bash
+  git clone https://github.com/bzorzet98/Exploring-sex-related-biases-in-DL-models-for-MI-BCI.git
 
-    cd Exploring-sex-related-biases-in-DL-models-for-MI-BCI
-    ```
+  cd Exploring-sex-related-biases-in-DL-models-for-MI-BCI
+```
 
 ## Index
 Index
