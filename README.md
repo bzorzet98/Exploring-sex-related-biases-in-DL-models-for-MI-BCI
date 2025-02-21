@@ -53,7 +53,7 @@ For install the packages required run this commands:
 ```bash
 conda activate train_environment
 conda install -c conda-forge scipy=1.14
-conda install -c conda-forge scikit-learn
+conda install -c conda-forge scikit-learn=1.5.2 
 ```
 You can install pytorch without CUDA support: 
 ```bash
@@ -65,10 +65,10 @@ conda install pytorch==2.3.0 torchvision==0.18.0 torchaudio==2.3.0 pytorch-cuda=
 ```
 Continue installing the following packages:
 ```bash
-conda install -c conda-forge pandas
-python -m pip install -U skorch
-pip install einops
-conda install -c conda-forge pyriemann
+conda install -c conda-forge pandas=2.2.3
+python -m pip install -U skorch==1.0.0
+pip install einops==0.8.0
+conda install -c conda-forge pyriemann=0.7
 ```
 ### 2. EEG Environment
 This environment is required for EEG data preprocessing.
@@ -80,8 +80,8 @@ For install the packages required run this commands:
 ```bash
 conda activate eeg_environment
 conda install -c conda-forge scipy=1.14
-conda install --channel conda-forge --strict-channel-priority mne
-pip install pandas
+conda install --channel conda-forge --strict-channel-priority mne=1.8.0
+pip install pandas==1.5.3
 pip install moabb==1.1.1
 ```
 
@@ -93,10 +93,10 @@ conda create --name analysis_environment python=3.11.9
 For install the packages required run this commands:
 ```bash
 conda activate analysis_environment 
-conda install -c conda-forge seaborn
-conda install pandas
-pip install pingouin
-pip install scikit-learn
+conda install -c conda-forge seaborn=0.13.2
+conda install pandas=2.2.2
+pip install pingouin==0.5.5
+pip install scikit-learn==1.5.2
 ```
 ## General Comments
 Due to the large volume of data, GitHub does not allow uploading all result files. Additionally, because of the large number of trained models, their parameters are not included in this repository. However, you can access all the analysis outputs derived from the model results via this [link](https://drive.google.com/drive/folders/1xlziR2qLWgLGcgJ8t3Nzqug0Nb_PVPzX?usp=sharing).
