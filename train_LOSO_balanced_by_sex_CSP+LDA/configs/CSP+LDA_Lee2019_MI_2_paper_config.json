@@ -5,7 +5,7 @@
                     "database_session":2,
                     "timestamp_to_continue_trainning": null},
     "databases": {
-        "config": "config_0",
+        "config": "classical_preprocessing_0",
         "channels": ["C3", "Cz", "C4"],
         "subjects":null
     },
