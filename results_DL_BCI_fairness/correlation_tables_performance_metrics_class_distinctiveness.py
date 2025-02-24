@@ -3,13 +3,11 @@ import os
 import pandas as pd
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
 import numpy as np
 from scipy import stats
 
-DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 # Charge the configuration of the script
 experiment_name = 'DL_BCI_fairness'
 datasets_name = ['Cho2017', 'Lee2019_MI', 'Lee2019_MI']
