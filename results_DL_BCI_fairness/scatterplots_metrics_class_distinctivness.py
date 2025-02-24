@@ -56,14 +56,14 @@ for metric_name in metrics_names:
     row_axes = 0
     if metric_name == "auc":
         figsize = (7,5)
-        plt.rcParams.update({
-            "font.family": "Times New Roman",  # Set font to Times New Roman
-            "axes.titlesize": 9,             # Title size
-            "axes.labelsize": 9,              # Labels size
-            "xtick.labelsize": 9,             # X-axis tick size
-            "ytick.labelsize": 10,             # Y-axis tick size
-            "legend.fontsize": 9              # Legend size
-        })
+        # plt.rcParams.update({
+        #     "font.family": "Times New Roman",  # Set font to Times New Roman
+        #     "axes.titlesize": 9,             # Title size
+        #     "axes.labelsize": 9,              # Labels size
+        #     "xtick.labelsize": 9,             # X-axis tick size
+        #     "ytick.labelsize": 10,             # Y-axis tick size
+        #     "legend.fontsize": 9              # Legend size
+        # })
 
     # Create the figure first figure
     fig, axes = plt.subplots(3, 3, figsize=figsize)  

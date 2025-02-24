@@ -1,25 +1,13 @@
 """ This scripts only process the metadata of the dataset, with only the specifics columns name of the datasets"""
+
+# Import Libraries
 import pandas as pd 
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scipy import stats
-import argparse
 import os
-
-import sys
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import init_paths
-from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
-
-# Import Libraries
-import os
-import argparse
-import pandas as pd
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import sys
-import scipy.stats as stats
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH

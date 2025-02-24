@@ -1,8 +1,6 @@
 # Import Libraries
 import os
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -10,7 +8,6 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH, SEX_DICT
 import numpy as np
-from scipy import stats
 
 def format_value(df, dataset, variable, column):
     filtered = df[(df['dataset'] == dataset) & (df['variables'] == variable)][column]

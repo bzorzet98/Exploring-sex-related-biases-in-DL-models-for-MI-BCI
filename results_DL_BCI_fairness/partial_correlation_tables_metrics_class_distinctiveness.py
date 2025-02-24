@@ -1,8 +1,6 @@
 # Import Libraries
 import os
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 import pingouin as pg
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -10,7 +8,6 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH, SEX_DICT
 import numpy as np
-from scipy import stats
 
 # Charge the configuration of the script
 experiment_name = 'DL_BCI_fairness'

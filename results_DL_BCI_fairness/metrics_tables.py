@@ -1,14 +1,11 @@
 # Import Libraries
 import os
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
-import numpy as np
 from scipy import stats
 
 # Charge the configuration of the script
