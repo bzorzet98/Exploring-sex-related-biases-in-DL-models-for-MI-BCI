@@ -10,8 +10,8 @@ import init_paths
 
 from src.utils.json_utils import load_json_file
 from sklearn.metrics import roc_auc_score
-
-from global_config import DIRECTORY_TO_SAVE_ROOT
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
+# from global_config import DIRECTORY_TO_SAVE_ROOT
 
 def accuracy(y_pred, y_true):
     return np.mean(y_pred == y_true)
@@ -22,7 +22,7 @@ parser.add_argument('--experiment_name', type=str, default = 'DL_BCI_fairness')
 parser.add_argument('--model_to_train', type=str, default = 'EEGNetv4_SM')
 parser.add_argument('--dataset_name', type=str,default = 'Cho2017')
 parser.add_argument('--session', type=int, default = 1)
-parser.add_argument('--timestamp', type=str, default = '20241004_144153')
+parser.add_argument('--timestamp', type=str, default = '20250222_111051')
 args = parser.parse_args()
 
 # Charge the configuration of the script

@@ -11,6 +11,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
 
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 # Import Libraries
 import os
 import argparse
@@ -28,7 +29,7 @@ from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
 experiment_name = 'DL_BCI_fairness'
 datasets_name = ['Cho2017', 'Lee2019_MI']
 row_names = ['Cho 2017', 'Lee 2019']
-
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 # Name of script
 script_name = os.path.basename(__file__).split('.')[0]
 path_to_save = os.path.join(DIRECTORY_TO_SAVE_ROOT, experiment_name, 'results_DL_BCI_fairness', script_name)
