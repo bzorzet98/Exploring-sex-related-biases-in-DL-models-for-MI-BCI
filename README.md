@@ -36,7 +36,8 @@ Index
   15. `results_DL_BCI_fairness/histogram_class_distinctiveness.py`
   16. `results_DL_BCI_fairness/partial_correlation_tables_metrics_class_distinctiveness.py`
   17. `results_DL_BCI_fairness/mixing_model_effects_table.py`
-  18. Other scripts that could be interesting to run
+  18. `results_DL_BCI_fairness/age_distribution.py`
+  19. Other scripts that could be interesting to run
 - Possible bugs
 - Citation 
 - License
@@ -306,8 +307,13 @@ This script computes the mixing model effects that allow us to understand the in
 conda activate analysis_environment
 python results_DL_BCI_fairness/mixing_model_effects_table.py
 ```
-
-### 18. Other scripts that could be interesting to run
+### 18. results_DL_BCI_fairness/age_distribution.py
+This script plots the age distribution for each database. 
+```bash
+conda activate analysis_environment
+python results_DL_BCI_fairness/age_distribution.py
+```
+### 19. Other scripts that could be interesting to run
 
 The following scripts are not results from the paper but could be useful to understand how the DL model and CSP+LDA model were trained and their performance metrics.
 

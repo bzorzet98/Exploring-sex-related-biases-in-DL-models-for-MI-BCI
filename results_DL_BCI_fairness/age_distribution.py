@@ -35,14 +35,14 @@ script_name = os.path.basename(__file__).split('.')[0]
 path_to_save = os.path.join(DIRECTORY_TO_SAVE_ROOT, experiment_name, 'results_DL_BCI_fairness', script_name)
 os.makedirs(path_to_save, exist_ok=True)
 
-plt.rcParams.update({
-    "font.family": "Times New Roman",  # Set font to Times New Roman
-    "axes.titlesize": 10,             # Title size
-    "axes.labelsize": 9,              # Labels size
-    "xtick.labelsize": 9,             # X-axis tick size
-    "ytick.labelsize": 9,             # Y-axis tick size
-    "legend.fontsize": 9              # Legend size
-})
+# plt.rcParams.update({
+#     "font.family": "Times New Roman",  # Set font to Times New Roman
+#     "axes.titlesize": 10,             # Title size
+#     "axes.labelsize": 9,              # Labels size
+#     "xtick.labelsize": 9,             # X-axis tick size
+#     "ytick.labelsize": 9,             # Y-axis tick size
+#     "legend.fontsize": 9              # Legend size
+# })
 
 custom_colors = sns.color_palette('Set1')
 custom_colors[0], custom_colors[1] = custom_colors[1], custom_colors[0]  # Swap the colors for 'Males' and 'Females'
