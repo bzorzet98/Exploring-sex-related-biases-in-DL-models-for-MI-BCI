@@ -9,15 +9,16 @@ from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
 import numpy as np
 from scipy import stats
 
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 # Charge the configuration of the script
 experiment_name = 'DL_BCI_fairness'
 datasets_name = ['Cho2017', 'Lee2019_MI', 'Lee2019_MI']
 sessions = [1,1,2]
 model_1 = 'EEGNetv4_SM'
-timestamps_1 = ['20241004_144153', '20241105_185644', '20241113_125922' ] # Original timestamps
+timestamps_1 = ['20250222_111051', '20250222_140710', '20250222_160239' ] # Original timestamps
 # timestamps_1 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
-model_2 = 'CSP+LDA' 
-timestamps_2 = ['20250218_162518', '20250218_172951', '20250218_181318'] # Original timestamps
+model_2 = 'CSP+LDA'
+timestamps_2 = ['20250222_180052', '20250222_190405', '20250222_194642'] # Original timestamps
 # timestamps_2 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
 dataset_titles = ['Cho 2017', 'Lee 2019 session 1', 'Lee 2019 session 2']
 # Name of script

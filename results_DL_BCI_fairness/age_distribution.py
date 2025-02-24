@@ -1,10 +1,7 @@
 """ This scripts only process the metadata of the dataset, with only the specifics columns name of the datasets"""
-
 # Import Libraries
-import pandas as pd 
-import matplotlib.pyplot as plt
-import seaborn as sns
 import os
+import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import sys
@@ -16,7 +13,7 @@ from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH
 experiment_name = 'DL_BCI_fairness'
 datasets_name = ['Cho2017', 'Lee2019_MI']
 row_names = ['Cho 2017', 'Lee 2019']
-
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 # Name of script
 script_name = os.path.basename(__file__).split('.')[0]
 path_to_save = os.path.join(DIRECTORY_TO_SAVE_ROOT, experiment_name, 'results_DL_BCI_fairness', script_name)

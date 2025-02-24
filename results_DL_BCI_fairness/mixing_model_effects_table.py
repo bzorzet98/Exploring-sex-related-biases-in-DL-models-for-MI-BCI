@@ -9,6 +9,7 @@ import init_paths
 from global_config import DIRECTORY_TO_SAVE_ROOT, DATABASES_PATH, SEX_DICT
 import numpy as np
 
+DIRECTORY_TO_SAVE_ROOT = os.path.join(os.getcwd(), "RESULTS")
 def format_value(df, dataset, variable, column):
     filtered = df[(df['dataset'] == dataset) & (df['variables'] == variable)][column]
     return f'{float(filtered.iloc[0]):.3f}' if not filtered.empty else 'NaN'
@@ -29,7 +30,17 @@ model_2 = 'CSP+LDA'
 timestamps_2 = ['20241210_161906', '20241210_172944', '20241210_181717'] # Original timestamps
 # timestamps_2 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
 row_names = ['Cho 2017', 'Lee 2019 session 1', 'Lee 2019 session 2']
-
+# Charge the configuration of the script
+experiment_name = 'DL_BCI_fairness'
+datasets_name = ['Cho2017', 'Lee2019_MI', 'Lee2019_MI']
+sessions = [1,1,2]
+model_1 = 'EEGNetv4_SM'
+timestamps_1 = ['20250222_111051', '20250222_140710', '20250222_160239' ] # Original timestamps
+# timestamps_1 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
+model_2 = 'CSP+LDA'
+timestamps_2 = ['20250222_180052', '20250222_190405', '20250222_194642'] # Original timestamps
+# timestamps_2 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
+row_names = ['Cho 2017', 'Lee 2019 session 1', 'Lee 2019 session 2']
 # Name of script
 script_name = os.path.basename(__file__).split('.')[0]
 path_to_save = os.path.join(DIRECTORY_TO_SAVE_ROOT, experiment_name, 'results_DL_BCI_fairness', script_name)
