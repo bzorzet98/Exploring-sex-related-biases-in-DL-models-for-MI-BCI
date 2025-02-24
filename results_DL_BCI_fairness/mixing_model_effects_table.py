@@ -27,7 +27,7 @@ model_1 = 'EEGNetv4_SM'
 timestamps_1 = ['20241004_144153', '20241105_185644', '20241113_125922' ] # Original timestamps
 # timestamps_1 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
 model_2 = 'CSP+LDA'
-timestamps_2 = ['20241210_161906', '20241210_172944', '20241210_181717'] # Original timestamps
+timestamps_2 = ['20250218_162518', '20250218_172951', '20250218_181318'] # Original timestamps
 # timestamps_2 = ['X', 'X', 'X'] # New timestamps , if you want to use new timestamps, replace 'X' with the new timestamp and uncomment this line
 row_names = ['Cho 2017', 'Lee 2019 session 1', 'Lee 2019 session 2']
 
