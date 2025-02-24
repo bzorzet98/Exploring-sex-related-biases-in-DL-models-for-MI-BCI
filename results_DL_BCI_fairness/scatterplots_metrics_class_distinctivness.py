@@ -37,14 +37,14 @@ custom_palette = {'M': custom_colors[0], 'F': custom_colors[1]}
 
 subset = 'test'
 
-plt.rcParams.update({
-    "font.family": "Times New Roman",  # Set font to Times New Roman
-    "axes.titlesize": 9,             # Title size
-    "axes.labelsize": 9,              # Labels size
-    "xtick.labelsize": 9,             # X-axis tick size
-    "ytick.labelsize": 10,             # Y-axis tick size
-    "legend.fontsize": 9              # Legend size
-})
+# plt.rcParams.update({
+#     "font.family": "Times New Roman",  # Set font to Times New Roman
+#     "axes.titlesize": 9,             # Title size
+#     "axes.labelsize": 9,              # Labels size
+#     "xtick.labelsize": 9,             # X-axis tick size
+#     "ytick.labelsize": 10,             # Y-axis tick size
+#     "legend.fontsize": 9              # Legend size
+# })
 
 marker_size = 6
 line_width = 1.5

@@ -30,14 +30,14 @@ hyphotesis_test = 'Mann-Whitney-U'
 
 df_table = pd.DataFrame(columns=['dataset',  'female', 'male', 'p-value'])
 
-plt.rcParams.update({
-    "font.family": "Times New Roman",  # Set font to Times New Roman
-    "axes.titlesize": 10,             # Title size
-    "axes.labelsize": 9,              # Labels size
-    "xtick.labelsize": 9,             # X-axis tick size
-    "ytick.labelsize": 9,             # Y-axis tick size
-    "legend.fontsize": 9              # Legend size
-})
+# plt.rcParams.update({
+#     "font.family": "Times New Roman",  # Set font to Times New Roman
+#     "axes.titlesize": 10,             # Title size
+#     "axes.labelsize": 9,              # Labels size
+#     "xtick.labelsize": 9,             # X-axis tick size
+#     "ytick.labelsize": 9,             # Y-axis tick size
+#     "legend.fontsize": 9              # Legend size
+# })
 
 fig, ax = plt.subplots(3, 2, figsize=(7,5))
 
